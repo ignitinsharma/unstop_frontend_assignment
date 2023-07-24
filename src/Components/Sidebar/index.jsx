@@ -68,7 +68,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <CloseButton
           display={{ base: "flex", md: "none" }}
           onClick={onClose}
-          color={location.pathname === "/" ? "#0073E6" : "white"} // Set close button color to border color when the menu is active
+          color={location.pathname === "/" ? "#0073E6" : "white"} 
         />
       </Flex>
 
@@ -79,22 +79,22 @@ const SidebarContent = ({ onClose, ...rest }) => {
           style={{
             opacity: "1",
             textDecoration: "none",
-            color: location.pathname === item.path ? "#0073E6" : "black", // Use the border color on active state
+            color: location.pathname === item.path ? "#0073E6" : "black",
           }}
         >
           <Box w={"full"} px={8} py={2} mt={1} fontSize="20px">
             <Box
               margin={"auto"}
-              borderRadius="10px" // Create a circular border
-              padding="5px" // Adjust the padding for better visibility
+              borderRadius="10px"
+              padding="5px"
               border={
                 location.pathname === item.path
-                  ? "2px solid #0073E6" // Add border color on active state
+                  ? "2px solid #0073E6"
                   : "2px solid white"
               }
               bg={
                 location.pathname === item.path
-                  ? "rgba(0, 115, 230, 0.2)" // Add background color on active state (light shade of the border color)
+                  ? "rgba(0, 115, 230, 0.2)"
                   : "transparent"
               }
             >
@@ -107,7 +107,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                   opacity: "1",
                   py: "1rem",
                   textDecoration: "none",
-                  color: location.pathname === item.path ? "#0073E6" : "black", // Use the border color on active state
+                  color: location.pathname === item.path ? "#0073E6" : "black",
                 }}
                 mr={3}
               />
