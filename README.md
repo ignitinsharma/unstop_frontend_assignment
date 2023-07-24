@@ -1,8 +1,44 @@
-# React + Vite
+# Dashboard UI for Assessment Management - Unstop
+Welcome to the Assessment Management Dashboard UI project! This user-friendly and visually appealing web application aims to streamline the process of managing assessments, making it effortless for users to add, share, and view assessments. Additionally, the Overview section provides valuable insights by displaying key statistics related to assessments, candidates, candidate sources, and the total purpose of the platform.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deployed Link
+https://unstop-frontend-assignment.vercel.app/
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project uses the following technologies and frameworks:
+
+- HTML
+- CSS
+- Javascript
+- React.js
+- React-Router-Dom
+- Chakra UI
+
+## Installation
+
+Provide instructions on how to install and set up your project locally. Include any prerequisites or dependencies required. For example:
+
+1. Clone the repository: `https://github.com/ignitinsharma/unstop_frontend_assignment.git`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+
+## Features
+- Add New Assessment: With this feature, users can easily create and add new assessments to the system. The intuitive interface allows them to input all the necessary details and specifications for each assessment.
+
+- Share Assessment: Our platform enables users to seamlessly share assessments with relevant stakeholders. Whether it's with other team members, managers, or external partners, sharing assessments is a breeze.
+
+- View Assessment: This feature offers a comprehensive view of all assessments in the system. Users can search, filter, and sort assessments based on various criteria, making it convenient to locate specific assessments quickly.
+
+
+## Screenshots
+
+![Screenshot 1](<./Redme_images/Screenshot%20(645).png>)
+
+- Login Page \*
+
+![Screenshot 2](<./Redme_images/Screenshot%20(646).png>)
+
+- Register Page \*
+
+
