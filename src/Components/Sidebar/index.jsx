@@ -15,11 +15,18 @@ import { FiMenu } from "react-icons/fi";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { PiNotePencilDuotone } from "react-icons/pi";
 import { MdOutlineLibraryAddCheck } from "react-icons/md";
+import { LiaExternalLinkSquareAltSolid } from "react-icons/lia";
 
 const LinkItems = [
   { name: "Dashboard", icon: LuLayoutDashboard, path: "/" },
-  { name: "Assessment", icon: PiNotePencilDuotone, path: "/top-tracks" },
-  { name: "My Library", icon: MdOutlineLibraryAddCheck, path: "/favorites" },
+  { name: "Assessment", icon: PiNotePencilDuotone, path: "/Assessment" },
+  { name: "My Library", icon: MdOutlineLibraryAddCheck, path: "/Library" },
+  {
+    name: "Round Status",
+    icon: LiaExternalLinkSquareAltSolid,
+    path: "/admin",
+    type: "Admin",
+  },
 ];
 
 const Sidebar = ({ children }) => {
@@ -82,6 +89,27 @@ const SidebarContent = ({ onClose, ...rest }) => {
           }}
         >
           <Box w={"full"} px={8} py={2} mt={1} fontSize="20px">
+            {item.type ? (
+              <Box
+                w={"74px"}
+                h={"18px"}
+                borderRadius={"22px"}
+                border={"1px solid #D63500"}
+                mb={"10px"}
+                bg={"#FBEBEA"}
+              >
+                <Text
+                  p={"1px 8px"}
+                  fontSize={"10px"}
+                  lineHeight={"12.1px"}
+                  fontWeight={"600"}
+                  color={"#D63500"}
+                  textAlign={"center"}
+                >
+                  {item?.type}
+                </Text>
+              </Box>
+            ) : null}
             <Box
               margin={"auto"}
               borderRadius="10px"

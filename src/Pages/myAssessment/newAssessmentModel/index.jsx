@@ -41,17 +41,22 @@ const NewAssessmentModal = ({ isOpen, onClose }) => {
       <ModalOverlay />
       <ModalContent
         w="591px"
-        h="616px"
+        h="650px"
         border="1px"
         borderColor="gray.200"
         padding="20px 30px"
         bg="white"
       >
-        <ModalHeader color="#1C4980" fontSize="20px" lineHeight="24.2px">
+        <ModalHeader
+          h={"70px"}
+          color="#1C4980"
+          fontSize="20px"
+          lineHeight="24.2px"
+        >
           Create New Assessment
         </ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
+        <ModalBody h="616px">
           <VStack spacing="20px" align="center">
             <Box w="531px" h="79px" gap="10px" textAlign="center">
               <FormLabel gap={"10px"}>
