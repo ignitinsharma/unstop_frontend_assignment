@@ -39,7 +39,7 @@ Provide instructions on how to install and set up your project locally. Include 
 
 - Home Page \*
 
-![Screenshot 2](<./redme_images/Screenshot (68).png>)
+![Screenshot 2](<./redme_images/Screenshot (69).png>)
 
 - Model Page \*
 
