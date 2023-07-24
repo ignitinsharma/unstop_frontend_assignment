@@ -35,12 +35,12 @@ Provide instructions on how to install and set up your project locally. Include 
 
 ## Screenshots
 
+- Home Page \*
 ![Screenshot 1](<./redme_images/Screenshot (68).png>)
 
-- Home Page \*
-
-![Screenshot 2](<./redme_images/Screenshot (69).png>)
 
 - Model Page \*
+![Screenshot 2](<./redme_images/Screenshot (69).png>)
+
 
 
