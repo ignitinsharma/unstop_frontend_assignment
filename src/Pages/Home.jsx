@@ -10,14 +10,16 @@ const Home = () => {
     <Box>
       <Flex>
         <Sidebar />
-        <Box border={"1px solid red"} h="734px" w={"1264px"}>
+        <Box
+          h={{ lg: "734px", base: "auto" }}
+          w={{ lg: "1264px", base: "375px" }}
+        >
           <TitleSection />
           <Box
-            w={"1264px"}
+            w={{ lg: "1264px", base: "375px" }}
             h={"664px"}
             p={"20px"}
             borderRadius={"0 0 12px 12px"}
-            border={"1px solid black"}
           >
             <AssessmentOverview />
             <MyAssessmentSection />

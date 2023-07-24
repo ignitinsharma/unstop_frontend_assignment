@@ -63,7 +63,6 @@ const SidebarContent = ({ onClose, ...rest }) => {
       pos="fixed"
       h="full"
       {...rest}
-      border={"1px solid black"}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <CloseButton
@@ -76,7 +75,6 @@ const SidebarContent = ({ onClose, ...rest }) => {
       {LinkItems.map((item, index) => (
         <NavLink
           key={index}
-          exact
           to={item.path}
           style={{
             opacity: "1",

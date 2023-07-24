@@ -15,6 +15,7 @@ import {
   Select,
   Text,
   Flex,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { RxCross2 } from "react-icons/rx";
 const skillsList = [
@@ -26,6 +27,41 @@ const skillsList = [
 ];
 
 const NewAssessmentModal = ({ isOpen, onClose }) => {
+  const modalWidth = useBreakpointValue({ base: "375px", md: "591px" });
+
+  const renderHeader = () => {
+    return (
+      <Text
+        color="#1C4980"
+        fontSize="20px"
+        lineHeight="24.2px"
+        textAlign="center"
+      >
+        Create New Assessment
+      </Text>
+    );
+  };
+
+  const renderModalFooter = () => {
+    return (
+      <Box>
+        <Button bg={"#0073E6"} w={"full"} colorScheme="green">
+          Save
+        </Button>
+      </Box>
+    );
+  };
+
+  const renderFooter = () => {
+    if (modalWidth === "375px") {
+      // For small screens, return the regular footer (no Chakra UI ModalFooter)
+      return renderModalFooter();
+    } else {
+      // For larger screens, use the Chakra UI ModalFooter
+      return <ModalFooter>{renderModalFooter()}</ModalFooter>;
+    }
+  };
+
   return (
     <Modal
       isCentered

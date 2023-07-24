@@ -1,31 +1,43 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
 import NewAssessment from "./newAssessmentComponent";
 import MathAssessment from "./mathAssessment";
 
 const MyAssessmentSection = () => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
   return (
-    <Box w={"1224px"} h={"445px"} gap={"16px"}>
-      <Box w={"1224px"} h={"40px"} pt={"20px"}>
-        <Text
-          w="137px"
-          h={"25px"}
-          fontSize={"18px"}
-          lineHeight={"25.2px"}
-          fontWeight={"500"}
-          color={"#1C4980"}
-        >
-          My Assessment
-        </Text>
+    <Box
+      w={{ lg: "1224px", base: "375px" }}
+      h={{ lg: "445px", base: "auto" }}
+      gap={"16px"}
+    >
+      <Box
+        w={{ lg: "1224px", base: "375px" }}
+        h={{ lg: "40px", base: "auto" }}
+        pt={"20px"}
+      >
+        {isMobile ? null : (
+          <Text
+            w="137px"
+            h={"25px"}
+            fontSize={"18px"}
+            lineHeight={"25.2px"}
+            fontWeight={"500"}
+            color={"#1C4980"}
+          >
+            My Assessment
+          </Text>
+        )}
       </Box>
 
       {/* New assignment section */}
       <Box
         mt={"1rem"}
-        w={"1224px"}
+        // w={"1224px"}
+        w={{ md: "1224px", base: "375px" }}
         h={"209px)"}
         gap={"30px"}
         display={"grid"}
-        gridTemplateColumns={"repeat(3,1fr)"}
+        gridTemplateColumns={{ md: "repeat(3,1fr)", base: '"repeat(1,1fr)"' }}
       >
         <NewAssessment />
         <MathAssessment />

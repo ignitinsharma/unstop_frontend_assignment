@@ -44,6 +44,7 @@ const TotalAssessment = () => {
                 top: "2.5px",
                 left: "1.67px",
                 color: "#6548EE",
+                zIndex:0
               }}
             />
           </Box>
