@@ -4,7 +4,8 @@ Welcome to the Assessment Management Dashboard UI project! This user-friendly an
 
 ## Deployed Link
 
-https://unstop-frontend-assignment.vercel.app/
+[Link](https://unstop-frontend-assignment.vercel.app/)
+
 
 ## Technologies
 
