@@ -116,6 +116,7 @@ const NewAssessmentModal = ({ isOpen, onClose }) => {
                     ))}
                   </Box>
                 </Box>
+                <Input placeholder="Type here" />
               </FormLabel>
               <FormLabel mt={"10px"}>
                 <Text fontWeight={"500"} fontSize={"16px"} color={"#1C4980"}>

@@ -1,6 +1,7 @@
 import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
 import NewAssessment from "./newAssessmentComponent";
 import MathAssessment from "./mathAssessment";
+import MathAssessmentTwo from "./mathAssessmentTwo";
 
 const MyAssessmentSection = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
@@ -32,7 +33,6 @@ const MyAssessmentSection = () => {
       {/* New assignment section */}
       <Box
         mt={"1rem"}
-        // w={"1224px"}
         w={{ md: "1224px", base: "375px" }}
         h={"209px)"}
         gap={"30px"}
@@ -41,7 +41,7 @@ const MyAssessmentSection = () => {
       >
         <NewAssessment />
         <MathAssessment />
-        <MathAssessment />
+        <MathAssessmentTwo />
       </Box>
     </Box>
   );

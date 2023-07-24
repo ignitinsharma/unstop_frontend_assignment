@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import React, { useState } from "react";
 import TotalAssessment from "./assessmentOverviewComponents/totalAssessment";
 import CandidatesSection from "./assessmentOverviewComponents/candidatesSection";
@@ -132,7 +132,6 @@ const AssessmentOverview = () => {
       {!isMobile && (
         <Flex
           mb={"10rem"}
-          // w={"1224px"}
           w={{ md: "1224px", base: "375px" }}
           h={"114px"}
           border={"1px solid #DADCE0"}

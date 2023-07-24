@@ -53,22 +53,21 @@ const Sidebar = ({ children }) => {
 };
 
 const SidebarContent = ({ onClose, ...rest }) => {
-  const location = useLocation(); // Get the current location using React Router's useLocation hook
-
+  const location = useLocation();
   return (
     <Box
       backgroundColor="#ffffff"
       color="white"
       w={{ base: "full", md: "150px" }}
       pos="fixed"
-      h="full"
+      h="fit-content"
       {...rest}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <CloseButton
           display={{ base: "flex", md: "none" }}
           onClick={onClose}
-          color={location.pathname === "/" ? "#0073E6" : "white"} 
+          color={location.pathname === "/" ? "#0073E6" : "white"}
         />
       </Flex>
 
@@ -127,7 +126,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
   return (
     <Box
       ml={{ base: 0, md: 60 }}
-      px={{ base: 4, md: 24 }}
+      px={{ base: 4, md: 12 }}
       height="20"
       alignItems="center"
       pos="sticky"
