@@ -1,175 +1,130 @@
+import { Box, Button, Grid, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import {
-  IconButton,
-  Box,
-  CloseButton,
-  Flex,
-  Icon,
-  Drawer,
-  DrawerContent,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { FiMenu } from "react-icons/fi";
-import { LuLayoutDashboard } from "react-icons/lu";
-import { PiNotePencilDuotone } from "react-icons/pi";
-import { MdOutlineLibraryAddCheck } from "react-icons/md";
-import { LiaExternalLinkSquareAltSolid } from "react-icons/lia";
+import assessment from "../../assets/assessment.svg";
+import dashboard from "../../assets/dashboard.svg";
+import Mylibrary from "../../assets/mylibrary.svg";
+import Roundstatus from "../../assets/roundstatus.svg";
 
-const LinkItems = [
-  { name: "Dashboard", icon: LuLayoutDashboard, path: "/" },
-  { name: "Assessment", icon: PiNotePencilDuotone, path: "/Assessment" },
-  { name: "My Library", icon: MdOutlineLibraryAddCheck, path: "/Library" },
-  {
-    name: "Round Status",
-    icon: LiaExternalLinkSquareAltSolid,
-    path: "/admin",
-    type: "Admin",
-  },
-];
-
-const Sidebar = ({ children }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  return (
-    <Box minH="992px" color="white">
-      <SidebarContent
-        onClose={onClose}
-        display={{ base: "none", md: "block" }}
-      />
-      <Drawer
-        autoFocus={false}
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        returnFocusOnClose={false}
-        onOverlayClick={onClose}
-        size="xs"
-      >
-        <DrawerContent>
-          <SidebarContent onClose={onClose} />
-        </DrawerContent>
-      </Drawer>
-      <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 40 }} p="4">
-        {children}
-      </Box>
-    </Box>
-  );
-};
-
-const SidebarContent = ({ onClose, ...rest }) => {
-  const location = useLocation();
+const SideBar = () => {
   return (
     <Box
-      backgroundColor="#ffffff"
-      color="white"
-      w={{ base: "full", md: "150px" }}
-      pos="fixed"
-      h="fit-content"
-      {...rest}
+      position="fixed"
+      w={{ base: "15%", md: "15%", lg: "10%" }}
+      display={{ base: "none", md: "block", lg: "block" }}
+      h="100vh"
+      zIndex="10"
+      top="0"
+      bgColor="white"
     >
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <CloseButton
-          display={{ base: "flex", md: "none" }}
-          onClick={onClose}
-          color={location.pathname === "/" ? "#0073E6" : "white"}
-        />
-      </Flex>
+      <Grid gap="6px" p="10px 20px" fontSize={"13px"} fontWeight={"500"}>
+        <Box p="10px" textAlign={"center"}>
+          <Image
+            src={dashboard}
+            alt="dashboard"
+            margin={"auto"}
+            width="15px"
+            height="15px"
+          />
+          <Text
+            py={"5px"}
+            fontWeight={"500"}
+            fontSize={"12px"}
+            color={"#1C4980"}
+          >
+            Dashboard
+          </Text>
+        </Box>
 
-      {LinkItems.map((item, index) => (
-        <NavLink
-          key={index}
-          to={item.path}
-          style={{
-            opacity: "1",
-            textDecoration: "none",
-            color: location.pathname === item.path ? "#0073E6" : "black",
-          }}
+        <Box
+          textAlign={"center"}
+          p="10px"
+          h={"70px"}
+          width={"90px"}
+          borderRadius={"8px"}
+          bgColor="#E5F1FC"
+          border="2px solid #4096EC"
+          color={"#4096EC"}
+          margin={"auto"}
         >
-          <Box w={"full"} px={8} py={2} mt={1} fontSize="20px">
-            {item.type ? (
-              <Box
-                w={"74px"}
-                h={"18px"}
-                borderRadius={"22px"}
-                border={"1px solid #D63500"}
-                mb={"10px"}
-                bg={"#FBEBEA"}
-              >
-                <Text
-                  p={"1px 8px"}
-                  fontSize={"10px"}
-                  lineHeight={"12.1px"}
-                  fontWeight={"600"}
-                  color={"#D63500"}
-                  textAlign={"center"}
-                >
-                  {item?.type}
-                </Text>
-              </Box>
-            ) : null}
-            <Box
-              margin={"auto"}
-              borderRadius="10px"
-              padding="5px"
-              border={
-                location.pathname === item.path
-                  ? "2px solid #0073E6"
-                  : "2px solid white"
-              }
-              bg={
-                location.pathname === item.path
-                  ? "rgba(0, 115, 230, 0.2)"
-                  : "transparent"
-              }
-            >
-              <Icon
-                margin={"auto"}
-                as={item.icon}
-                style={{
-                  width: "15px",
-                  height: "15px",
-                  opacity: "1",
-                  py: "1rem",
-                  textDecoration: "none",
-                  color: location.pathname === item.path ? "#0073E6" : "black",
-                }}
-                mr={3}
-              />
+          <Image
+            src={assessment}
+            alt="assessment"
+            margin={"auto"}
+            width="14.34px"
+            height="15.84px"
+          />
+          <Text
+            py={"5px"}
+            w={"71px"}
+            fontSize={"12px"}
+            fontWeight={"500"}
+            color={"#0073E6"}
+          >
+            Assessment
+          </Text>
+        </Box>
 
-              <Box>
-                <Text fontSize={"12px"}>{item.name}</Text>
-              </Box>
-            </Box>
-          </Box>
-        </NavLink>
-      ))}
+        <Box p="10px" textAlign={"center"}>
+          <Image
+            src={Mylibrary}
+            alt="Mylibrary"
+            margin={"auto"}
+            width="16.57pxpx"
+            height="15.22px"
+          />
+          <Text
+            py={"5px"}
+            fontSize={"12px"}
+            fontWeight={"500"}
+            color={"#1C4980"}
+          >
+            My Library
+          </Text>
+        </Box>
+
+        <Box p="10px" borderTop={"1px dotted #E3E5E8"} mt="10px">
+          <Button
+            fontSize={"10px"}
+            w="46px"
+            h="18px"
+            textAlign={"center"}
+            border-radius="22px"
+            alignItems={"center"}
+            display={"block"}
+            fontWeight={"500"}
+            p="0px 4px"
+            m={"auto"}
+            border="1px solid #D63500"
+            background="#FBEBEA"
+            color="#D63500"
+          >
+            Admin
+          </Button>
+        </Box>
+
+        <Box textAlign={"center"}>
+          <Image
+            src={Roundstatus}
+            alt="Roundstatus"
+            margin={"auto"}
+            width="14px"
+            height="15.5px"
+          />
+          <Text
+            pt={"5px"}
+            fontSize={"12px"}
+            fontWeight={"500"}
+            color={"#1C4980"}
+          >
+            Round
+          </Text>
+          <Text fontSize={"12px"} fontWeight={"500"} color={"#1C4980"}>
+            Status
+          </Text>
+        </Box>
+      </Grid>
     </Box>
   );
 };
 
-const MobileNav = ({ onOpen, ...rest }) => {
-  return (
-    <Box
-      ml={{ base: 0, md: 60 }}
-      px={{ base: 4, md: 12 }}
-      height="20"
-      alignItems="center"
-      pos="sticky"
-      top={0}
-      justifyContent="flex-start"
-      {...rest}
-    >
-      <IconButton
-        variant="outline"
-        onClick={onOpen}
-        aria-label="open menu"
-        icon={<FiMenu />}
-      />
-    </Box>
-  );
-};
-
-export default Sidebar;
+export default SideBar;

@@ -19,9 +19,10 @@ const AssessmentOverview = () => {
 
   return (
     <Box
+      mt={"10px"}
       w={{ md: "1224px", base: "375px" }}
       mb={marginBottomValue}
-      h={"155px"}
+      h={{ lg: "155px", base: "auto" }}
       gap={"16px"}
     >
       <Flex justifyContent="space-between" alignItems="center">
@@ -53,6 +54,7 @@ const AssessmentOverview = () => {
               fontWeight={"500"}
               color={"#1C4980"}
               mb={"12px"}
+              pl={{ base: "12px", lg: "0" }}
             >
               My Assessment
             </Text>

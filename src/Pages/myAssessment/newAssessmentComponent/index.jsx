@@ -1,7 +1,5 @@
-import React from "react";
 import { Box, Text, useDisclosure } from "@chakra-ui/react";
-import { FaPlus } from "react-icons/fa";
-import NewAssessmentModal from "../newAssessmentModel";
+import AddItem from "../newAssessmentDrawer";
 
 const NewAssessment = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,15 +17,7 @@ const NewAssessment = () => {
     >
       <Box w={"150px"} m="auto" h={"102px"} gap={"10px"}>
         <Box w={"70px"} m={"auto"} h={"70px"} gap={"10px"} padding={"10px"}>
-          <FaPlus
-            style={{
-              width: "23.33px",
-              height: "23.33px",
-              top: "2.5px",
-              left: "1.67px",
-              color: "#0073E6",
-            }}
-          />
+          <AddItem isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
         </Box>
         <Text
           w={"150px"}
@@ -53,9 +43,6 @@ const NewAssessment = () => {
         From here you can add questions of multiple types like MCQs, subjective
         (text or paragraph)!{" "}
       </Text>
-
-      {/* Model Component*/}
-      <NewAssessmentModal isOpen={isOpen} onClose={onClose} />
     </Box>
   );
 };

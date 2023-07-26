@@ -6,3 +6,17 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
+/* Add this to your CSS */
+.move-right-animation {
+  animation: moveRight 0.3s forwards;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10rem);
+  }
+}

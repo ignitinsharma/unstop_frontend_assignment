@@ -5,8 +5,8 @@ import { MdOutlinePeople } from "react-icons/md";
 const CandidatesSection = () => {
   return (
     <Box
-      w={"369px"}
-      h={"114px"}
+      w={{ lg: "369px", base: "345px" }}
+      h={{ lg: "114px", base: "auto" }}
       p={"16px 20px"}
       gap={"16px"}
       borderRight={"1px solid #DADCE0"}
